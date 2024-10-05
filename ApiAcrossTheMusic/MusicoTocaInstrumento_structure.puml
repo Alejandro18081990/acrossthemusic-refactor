@@ -1,0 +1,310 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "com.example.demo.entities.MusicoTocaInstrumento",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1322970774 { 
+   	label=example
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_134842393 { 
+   	label=demo
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Estilo2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Estilo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   idEstilo: long [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nombreEstilo: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># canEqual(other: Object): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Grupo2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Grupo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   anioFormacion: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   idGrupo: long [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   musicosTocanGrupo: Set&lt;MusicoTocaGrupo&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nombreGrupo: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Instrumento2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Instrumento</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   idInstrumento: long [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   musicoTocaInstrumento: Set&lt;MusicoTocaInstrumento&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nombreInstrumento: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># canEqual(other: Object): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+JamSession2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)JamSession</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   estilo: Estilo [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   fecha: Date [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   idJamSession: Long [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   jamSession: Set&lt;MusicoTocaJam&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   lugar: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nombreJam: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Musico2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Musico</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   aniosExperiencia: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   apellido1: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   apellido2: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   edad: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   email: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   formacion: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   idMusico: long [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   musicoMensaje: Set&lt;MusicoMensaje&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   musicoRemitente: Set&lt;MusicoMensaje&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   musicoTocaEstilo: Set&lt;MusicoTocaEstilo&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   musicoTocaGrupo: Set&lt;MusicoTocaGrupo&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   musicoTocaInstrumento: Set&lt;MusicoTocaInstrumento&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   musicoTocaJam: Set&lt;MusicoTocaJam&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nombre: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   permiso: Permisos [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   tieneFormacion: boolean [1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MusicoMensaje2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MusicoMensaje</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   cuerpoMensaje: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   fechaEnvio: Date [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   id: Long [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   leido: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   musicoDestinatario: Musico [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   musicoRemitente: Musico [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># canEqual(other: Object): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MusicoTocaEstilo2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MusicoTocaEstilo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   estilo: Estilo [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   id: Long [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   musico: Musico [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># canEqual(other: Object): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MusicoTocaGrupo2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MusicoTocaGrupo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   grupo: Grupo [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   id: long [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   musico: Musico [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MusicoTocaInstrumento2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MusicoTocaInstrumento</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   id: Long [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   instrumento: Instrumento [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   musico: Musico [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MusicoTocaJam2082814267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MusicoTocaJam</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   id: Long [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   jamSession: JamSession [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   musicoTocaJam: Musico [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+Grupo2082814267 -> MusicoTocaGrupo2082814267[label="musicosTocanGrupo
+[0..*]"];
+Instrumento2082814267 -> MusicoTocaInstrumento2082814267[label="musicoTocaInstrumento
+[0..*]"];
+JamSession2082814267 -> Estilo2082814267[label="estilo
+[0..1]"];
+JamSession2082814267 -> MusicoTocaJam2082814267[label="jamSession
+[0..*]"];
+Musico2082814267 -> MusicoMensaje2082814267[label="musicoMensaje
+[0..*]"];
+Musico2082814267 -> MusicoMensaje2082814267[label="musicoRemitente
+[0..*]"];
+Musico2082814267 -> MusicoTocaEstilo2082814267[label="musicoTocaEstilo
+[0..*]"];
+Musico2082814267 -> MusicoTocaGrupo2082814267[label="musicoTocaGrupo
+[0..*]"];
+Musico2082814267 -> MusicoTocaInstrumento2082814267[label="musicoTocaInstrumento
+[0..*]"];
+Musico2082814267 -> MusicoTocaJam2082814267[label="musicoTocaJam
+[0..*]"];
+MusicoMensaje2082814267 -> Musico2082814267[label="musicoDestinatario
+[0..1]"];
+MusicoMensaje2082814267 -> Musico2082814267[label="musicoRemitente
+[0..1]"];
+MusicoTocaEstilo2082814267 -> Estilo2082814267[label="estilo
+[0..1]"];
+MusicoTocaEstilo2082814267 -> Musico2082814267[label="musico
+[0..1]"];
+MusicoTocaGrupo2082814267 -> Grupo2082814267[label="grupo
+[0..1]"];
+MusicoTocaGrupo2082814267 -> Musico2082814267[label="musico
+[0..1]"];
+MusicoTocaInstrumento2082814267 -> Instrumento2082814267[label="instrumento
+[0..1]"];
+MusicoTocaInstrumento2082814267 -> Musico2082814267[label="musico
+[0..1]"];
+MusicoTocaJam2082814267 -> JamSession2082814267[label="jamSession
+[0..1]"];
+MusicoTocaJam2082814267 -> Musico2082814267[label="musicoTocaJam
+[0..1]"];
+    
+}
+@enduml
