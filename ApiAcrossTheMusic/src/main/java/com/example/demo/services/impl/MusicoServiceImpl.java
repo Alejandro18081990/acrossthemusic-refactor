@@ -4,6 +4,7 @@ import java.util.List;
 
 
 import com.common_microservicios.common_microservicios.commons.services.impl.CommonServiceImpl;
+import com.example.demo.services.MusicoService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
@@ -12,7 +13,7 @@ import com.example.demo.entities.Musico;
 import com.example.demo.repositorios.MusicoRepository;
 
 @Service
-public class MusicoServiceImpl extends CommonServiceImpl<Musico, MusicoRepository> {
+public class MusicoServiceImpl extends CommonServiceImpl<Musico, MusicoRepository> implements MusicoService {
 
     @Autowired
     private MusicoRepository musicoRepository;

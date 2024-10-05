@@ -4,10 +4,12 @@ import com.common_microservicios.common_microservicios.commons.services.impl.Com
 import com.example.demo.entities.MusicoTocaEstilo;
 
 import com.example.demo.repositorios.MusicoTocaEstiloRepository;
+import com.example.demo.services.MusicoTocaEstiloService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
-public class MusicoTocaEstiloServiceImpl extends CommonServiceImpl<MusicoTocaEstilo, MusicoTocaEstiloRepository> {
+@Service
+public class MusicoTocaEstiloServiceImpl extends CommonServiceImpl<MusicoTocaEstilo, MusicoTocaEstiloRepository> implements MusicoTocaEstiloService {
 
     @Autowired
     MusicoTocaEstiloRepository mteRepository;

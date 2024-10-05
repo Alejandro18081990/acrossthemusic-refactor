@@ -6,12 +6,12 @@ import com.example.demo.entities.Grupo;
 
 import com.example.demo.repositorios.GrupoRepository;
 
+import com.example.demo.services.GrupoService;
 import org.springframework.stereotype.Service;
 
 
-
 @Service
-public class GrupoServiceImpl extends CommonServiceImpl<Grupo, GrupoRepository> {
+public class GrupoServiceImpl extends CommonServiceImpl<Grupo, GrupoRepository> implements GrupoService {
 
 
 }
