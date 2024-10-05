@@ -4,7 +4,7 @@ import com.example.demo.dto.instrumentoDTO.InstrumentoDTO;
 import com.example.demo.dto.instrumentoDTO.InstrumentoDTOConverter;
 import com.example.demo.entities.Instrumento;
 import com.example.demo.interfaces.ControllerInterface;
-import com.example.demo.services.InstrumentosServiceImpl;
+import com.example.demo.services.impl.InstrumentosServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

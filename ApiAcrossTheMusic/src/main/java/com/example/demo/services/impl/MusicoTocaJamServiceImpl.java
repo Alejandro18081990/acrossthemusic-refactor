@@ -1,4 +1,4 @@
-package com.example.demo.services;
+package com.example.demo.services.impl;
 
 
 import com.common_microservicios.common_microservicios.commons.services.impl.CommonServiceImpl;
@@ -7,8 +7,6 @@ import com.example.demo.repositorios.MusicoTocaJamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class MusicoTocaJamServiceImpl extends CommonServiceImpl<MusicoTocaJam, MusicoTocaJamRepository> {

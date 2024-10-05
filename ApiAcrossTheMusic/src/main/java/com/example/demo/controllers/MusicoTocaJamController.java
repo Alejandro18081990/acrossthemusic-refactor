@@ -4,15 +4,12 @@ package com.example.demo.controllers;
 import com.example.demo.dto.mtj.MusicoTocaJamDTO;
 
 import com.example.demo.dto.mtj.MusicoTocaJamDtoConverter;
-import com.example.demo.entities.JamSession;
-import com.example.demo.entities.Musico;
 import com.example.demo.entities.MusicoTocaJam;
 import com.example.demo.interfaces.ControllerInterface;
-import com.example.demo.services.MusicoTocaJamServiceImpl;
+import com.example.demo.services.impl.MusicoTocaJamServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.apache.juli.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 @RestController
 @RequiredArgsConstructor

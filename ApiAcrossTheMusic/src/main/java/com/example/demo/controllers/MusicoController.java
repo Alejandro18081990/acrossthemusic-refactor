@@ -1,11 +1,9 @@
 package com.example.demo.controllers;
 
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import ch.qos.logback.core.CoreConstants;
 import com.example.demo.interfaces.ControllerInterface;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -22,7 +20,7 @@ import com.example.demo.entities.Musico;
 import com.example.demo.repositorios.EstiloRepository;
 import com.example.demo.repositorios.JamSessionRepository;
 import com.example.demo.repositorios.MusicoRepository;
-import com.example.demo.services.MusicoServiceImpl;
+import com.example.demo.services.impl.MusicoServiceImpl;
 
 import lombok.RequiredArgsConstructor;
 
