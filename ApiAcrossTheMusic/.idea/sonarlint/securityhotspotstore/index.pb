@@ -66,3 +66,7 @@ w
 Gsrc/main/java/com/example/demo/controllers/MusicoTocaJamController.java,f\8\f86800c8cccdbe06e45ad017faae9c9278655070
 q
 Asrc/main/java/com/example/demo/services/MusicoTocaJamService.java,3\d\3dba6e39ecee9951144d8af127ab3ab988330a24
+‘
+asrc/main/java/com/common_microservicios/common_microservicios/commons/services/CommonService.java,9\4\9461740f8dd5d376684cccf13e828680b0b76128
+m
+=src/main/java/com/example/demo/ApiAcrossMusicApplication.java,8\3\838ecfe2ec5055bc27cc8122587eb2248cee7fe1
