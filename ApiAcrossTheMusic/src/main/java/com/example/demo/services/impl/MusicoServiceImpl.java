@@ -3,7 +3,7 @@ package com.example.demo.services.impl;
 import java.util.List;
 
 
-import com.common_microservicios.common_microservicios.commons.services.impl.CommonServiceImpl;
+import com.common_microservicios.commons.services.impl.CommonServiceImpl;
 import com.example.demo.services.MusicoService;
 import org.springframework.beans.factory.annotation.Autowired;
 

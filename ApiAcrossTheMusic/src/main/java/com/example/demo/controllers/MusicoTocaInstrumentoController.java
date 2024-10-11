@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
-import com.common_microservicios.common_microservicios.commons.controller.CommonController;
+
+import com.common_microservicios.commons.controller.CommonController;
 import com.example.demo.dto.mtIDTO.MusicoTocaInstrumentoDTO;
 import com.example.demo.dto.mtIDTO.MusicoTocaInstrumentoDTOConverter;
 import com.example.demo.entities.MusicoTocaInstrumento;
@@ -10,12 +11,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor

@@ -1,6 +1,6 @@
 package com.example.demo.controllers;
 
-import com.common_microservicios.common_microservicios.commons.controller.CommonController;
+import com.common_microservicios.commons.controller.CommonController;
 import com.example.demo.dto.musicoMensajeDTO.MusicoMensajeDTO;
 import com.example.demo.dto.musicoMensajeDTO.MusicoMensajeDTOConverter;
 import com.example.demo.entities.MusicoMensaje;
@@ -36,7 +36,7 @@ public class MusicoMensajeController extends CommonController<MusicoMensaje, Mus
     }
 
 
-    @GetMapping("/{id}")
+    @GetMapping("/musico/{id}")
     @Operation(summary = "Devuelve todos los registros de MusicoMensaje que coinciden con la idMusico recibida")
     public ResponseEntity<List<MusicoMensajeDTO>> findMusicoMensajeByMusicoDestinatarioId(@PathVariable Long id) {
         if (id == null)

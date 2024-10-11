@@ -1,2 +1,2 @@
 =======================================Tareas=======================================
-1. Terminar controladores y api
+1. Cambiar los tipos devueltos en los génericos

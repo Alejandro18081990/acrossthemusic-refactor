@@ -1,9 +1,4 @@
 
-:
-
-Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
-B
-docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
 p
 @src/main/java/com/example/demo/controllers/EstiloController.java,9\6\96310b7e94994fda8811a8332615a6ad1d654742
 7
@@ -48,8 +43,6 @@ m
 =src/main/java/com/example/demo/ApiAcrossMusicApplication.java,8\3\838ecfe2ec5055bc27cc8122587eb2248cee7fe1
 s
 Csrc/main/java/com/example/demo/services/impl/EstiloServiceImpl.java,a\e\aeaf66c374f5cf1afd80ae95a052b0712edbff27
-–
-fsrc/main/java/com/common_microservicios/common_microservicios/commons/controller/CommonController.java,0\a\0a7fdc8626bd9fc5266d1d44e2e2c0ac9c4cd0af
 o
 ?src/main/java/com/example/demo/configuracion/Configuracion.java,4\0\40a73a5d34aee4297772e7775dd4d90f8ee30e2e
 r
@@ -68,3 +61,9 @@ Msrc/main/java/com/example/demo/services/impl/MusicoTocaEstiloServiceImpl.java,
 Rsrc/main/java/com/example/demo/services/impl/MusicoTocaInstrumentoServiceImpl.java,4\7\47a3d161c5e649d3b0bafff1c86d20bf4b118ec0
 z
 Jsrc/main/java/com/example/demo/services/impl/MusicoTocaJamServiceImpl.java,4\6\46bbfe01298117c74b9fcb44f09589a23b95014b
+€
+Psrc/main/java/com/common_microservicios/commons/controller/CommonController.java,7\1\71d6600efaf24e40cdc6cb7ef355318cb23c3a62
+{
+Ksrc/main/java/com/common_microservicios/commons/services/CommonService.java,2\c\2c4c43d563dbe81ae3e8ceaca2e48288ad731800
+„
+Tsrc/main/java/com/common_microservicios/commons/services/impl/CommonServiceImpl.java,0\e\0e8662ddc6bc5d52360bdf07eaadfec5f8c490e3

@@ -1,7 +1,8 @@
 package com.example.demo.controllers;
 
-import com.common_microservicios.common_microservicios.commons.controller.CommonController;
 
+
+import com.common_microservicios.commons.controller.CommonController;
 import com.example.demo.entities.Grupo;
 
 import com.example.demo.services.GrupoService;

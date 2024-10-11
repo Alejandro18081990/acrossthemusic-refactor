@@ -1,6 +1,8 @@
 package com.example.demo.services.impl;
 
-import com.common_microservicios.common_microservicios.commons.services.impl.CommonServiceImpl;
+
+
+import com.common_microservicios.commons.services.impl.CommonServiceImpl;
 import com.example.demo.entities.Instrumento;
 
 import com.example.demo.repositorios.InstrumentoRepository;

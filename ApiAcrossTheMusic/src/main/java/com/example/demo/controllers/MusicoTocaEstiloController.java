@@ -1,6 +1,6 @@
 package com.example.demo.controllers;
 
-import com.common_microservicios.common_microservicios.commons.controller.CommonController;
+import com.common_microservicios.commons.controller.CommonController;
 import com.example.demo.dto.mteDTO.MusicoTocaEstiloDTOConverter;
 import com.example.demo.entities.MusicoTocaEstilo;
 import com.example.demo.repositorios.MusicoTocaEstiloRepository;

@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
 
-import com.common_microservicios.common_microservicios.commons.controller.CommonController;
+import com.common_microservicios.commons.controller.CommonController;
 import com.example.demo.entities.MusicoTocaJam;
 import com.example.demo.services.MusicoTocaJamService;
 import com.example.demo.services.impl.MusicoTocaJamServiceImpl;
