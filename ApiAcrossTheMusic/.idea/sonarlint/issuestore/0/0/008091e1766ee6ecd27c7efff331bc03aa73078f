@@ -1,0 +1,11 @@
+
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8€¾Ç‘¨2J$a5a60e8a-3aa2-49b2-aff2-a529402c1b67
+š
+java:S1450
+"WRemove the "createAt" field and declare it as a local variable in the relevant methods.(”Ù™À8€¾Ç‘¨2J$05c66d3f-2ca9-451a-9f43-19f87bfb119a
+=
+java:S2326"D is not used in the class.(«Ûä™øÿÿÿÿ8ÑÁŞ‘¨2
+o
+java:S1068
+",Remove this unused "createAt" private field.(”Ù™À8¾Ç‘¨2J$78d77532-f773-434f-8cac-d1036331b3f1

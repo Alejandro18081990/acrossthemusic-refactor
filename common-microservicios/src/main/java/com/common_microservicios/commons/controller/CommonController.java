@@ -1,7 +1,9 @@
 package com.common_microservicios.commons.controller;
 
 
+import com.common_microservicios.commons.dto.CommonDTO;
 import com.common_microservicios.commons.services.CommonService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -11,19 +13,33 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.ParameterizedType;
+import java.util.*;
 
-public class CommonController<E, S extends CommonService<E>> {
+
+public class CommonController<E, D extends CommonDTO, S extends CommonService<E>> {
 
     @Autowired
     protected S service;
 
+    private Class<D> dtoType;
+
+    public void init() {
+        final ParameterizedType genericSuperclass = (ParameterizedType) getClass().getGenericSuperclass();
+        dtoType = (Class<D>) genericSuperclass.getActualTypeArguments()[1];
+    }
+
     @GetMapping
-    public ResponseEntity<Iterable<E>> findAll() {
+    public ResponseEntity<List<D>> findAll() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Iterable<E> entityList = service.findAll();
-        return ResponseEntity.ok().body(entityList);
+        final D dto = dtoType.getConstructor().newInstance();
+        List<D> dtoList = new ArrayList<>();
+        for (E entity : entityList) {
+            dto.loadFromDomain(entity);
+            dtoList.add(dto);
+        }
+        return ResponseEntity.ok().body(dtoList);
     }
 
     @GetMapping("/pagina")

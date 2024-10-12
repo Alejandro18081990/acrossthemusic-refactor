@@ -25,7 +25,7 @@ public class GrupoDTOConverter {
         Set<MusicoTocaGrupo> miembros = grupo.getMusicosTocanGrupo();
         List<MusicoDTO> musicos = miembros
                 .stream()
-                .map(musico -> musicoDtoConverter.convertirADTO(musico.getMusico()))
+                .map(musico -> musicoDtoConverter.customLoadFromDomain(musico.getMusico()))
                 .collect(Collectors.toList());
         GrupoDTO grupoDTO = modelMapper.map(grupo, GrupoDTO.class);
         grupoDTO.setMusicosTocanGrupo(musicos);

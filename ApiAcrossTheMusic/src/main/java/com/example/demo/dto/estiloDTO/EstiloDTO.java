@@ -1,9 +1,10 @@
 package com.example.demo.dto.estiloDTO;
 
+import com.common_microservicios.commons.dto.CommonDTO;
 import lombok.Data;
 
 @Data
-public class EstiloDTO {
+public class EstiloDTO extends CommonDTO {
 
     private long idEstilo;
     private String nombreEstilo;

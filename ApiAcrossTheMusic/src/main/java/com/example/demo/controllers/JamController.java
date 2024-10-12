@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.common_microservicios.commons.controller.CommonController;
+import com.example.demo.dto.jamSessionDto.JamSessionDto;
 import com.example.demo.dto.musicoDto.MusicoDTO;
 import com.example.demo.dto.musicoDto.MusicoDtoConverter;
 import com.example.demo.entities.JamSession;
@@ -24,7 +25,7 @@ import java.util.stream.Collectors;
 @RequestMapping("apiATM/jams")
 @RequiredArgsConstructor
 @Tag(name = "PI Across the music - Controlador Jams")
-public class JamController extends CommonController<JamSession, JamSessionService> {
+public class JamController extends CommonController<JamSession, JamSessionDto, JamSessionService> {
 
 
     @Autowired
@@ -41,7 +42,7 @@ public class JamController extends CommonController<JamSession, JamSessionServic
         if (musicosConsultados.isEmpty())
             return ResponseEntity.notFound().build();
         List<MusicoDTO> musicosDTOsConsultados = musicosConsultados.stream().map(musico ->
-                        musicoDtoConverter.convertirADTO(musico))
+                        musicoDtoConverter.customLoadFromDomain(musico))
                 .collect(Collectors.toList());
         return ResponseEntity.ok(musicosDTOsConsultados);
     }

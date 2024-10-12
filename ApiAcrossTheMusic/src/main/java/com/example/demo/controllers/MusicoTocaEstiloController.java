@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.common_microservicios.commons.controller.CommonController;
+import com.example.demo.dto.mteDTO.MusicoTocaEstiloDTO;
 import com.example.demo.dto.mteDTO.MusicoTocaEstiloDTOConverter;
 import com.example.demo.entities.MusicoTocaEstilo;
 import com.example.demo.repositorios.MusicoTocaEstiloRepository;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("apiATM/musicos/mte")
 @Tag(name = "PI: Across the music - Controlador MusicoTocaEstilo")
-public class MusicoTocaEstiloController extends CommonController<MusicoTocaEstilo, MusicoTocaEstiloService> {
+public class MusicoTocaEstiloController extends CommonController<MusicoTocaEstilo, MusicoTocaEstiloDTO,MusicoTocaEstiloService> {
 
     @Autowired
     MusicoTocaEstiloRepository musicoTocaEstiloRepository;

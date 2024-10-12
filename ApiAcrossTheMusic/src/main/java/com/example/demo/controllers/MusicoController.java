@@ -25,7 +25,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("apiATM/musicos")
 @Tag(name = "PI: Across the music - Controlador Musicos")
-public class MusicoController extends CommonController<Musico, MusicoService> {
+public class MusicoController extends CommonController<Musico, MusicoDTO, MusicoService> {
 
     private static final Logger log = LoggerFactory.getLogger(MusicoController.class);
 
@@ -44,7 +44,7 @@ public class MusicoController extends CommonController<Musico, MusicoService> {
             ResponseEntity.notFound().build();
         List<MusicoDTO> musicosConsultaDto = new ArrayList<>();
         for (Musico musico : musicos)
-            musicosConsultaDto.add(musicoDtoConverter.convertirADTO(musico));
+            musicosConsultaDto.add(musicoDtoConverter.customLoadFromDomain(musico));
         return ResponseEntity.ok(musicosConsultaDto);
     }
 
@@ -54,7 +54,7 @@ public class MusicoController extends CommonController<Musico, MusicoService> {
         Musico musicoConsultado = musicoServiceImpl.findMusicoByEmail(email);
         if (musicoConsultado == null)
             return ResponseEntity.noContent().build();
-        return ResponseEntity.ok(musicoDtoConverter.convertirADTO(musicoConsultado));
+        return ResponseEntity.ok(musicoDtoConverter.customLoadFromDomain(musicoConsultado));
     }
 }
 

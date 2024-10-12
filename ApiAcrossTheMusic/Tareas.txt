@@ -1,2 +1,4 @@
 =======================================Tareas=======================================
 1. Cambiar los tipos devueltos en los génericos
+2. Me quedo intenando inicializar dtoType en CommonController.
+3. Manejo de excepciones en loadFromDomain y similares.

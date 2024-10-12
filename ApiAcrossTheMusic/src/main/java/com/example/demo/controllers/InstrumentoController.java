@@ -3,6 +3,7 @@ package com.example.demo.controllers;
 
 
 import com.common_microservicios.commons.controller.CommonController;
+import com.example.demo.dto.instrumentoDTO.InstrumentoDTO;
 import com.example.demo.entities.Instrumento;
 
 import com.example.demo.services.InstrumentoService;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("apiATM/instrumentos")
 @Tag(name = "PI Across the music - Controlador instrumentos")
-public class InstrumentoController extends CommonController<Instrumento, InstrumentoService> {
+public class InstrumentoController extends CommonController<Instrumento, InstrumentoDTO, InstrumentoService> {
 
 
 }

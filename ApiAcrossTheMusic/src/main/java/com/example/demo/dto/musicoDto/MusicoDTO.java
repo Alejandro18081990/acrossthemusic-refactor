@@ -2,6 +2,7 @@ package com.example.demo.dto.musicoDto;
 
 import java.util.List;
 
+import com.common_microservicios.commons.dto.CommonDTO;
 import com.example.demo.Permisos;
 import com.example.demo.dto.mtIDTO.MusicoTocaInstrumentoDTO;
 import com.example.demo.dto.mteDTO.MusicoTocaEstiloDTO;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class MusicoDTO {
+public class MusicoDTO extends CommonDTO {
 
     private long idMusico;
     private String email;

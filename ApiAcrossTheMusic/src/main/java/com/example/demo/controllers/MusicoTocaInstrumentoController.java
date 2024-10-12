@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("apiATM/musicos/mti")
 @Tag(name = "PI: Across the music - Controlador MusicoTocaInstrumento")
-public class MusicoTocaInstrumentoController extends CommonController<MusicoTocaInstrumento, MusicoTocaInstrumentoService> {
+public class MusicoTocaInstrumentoController extends CommonController<MusicoTocaInstrumento,MusicoTocaInstrumentoDTO,  MusicoTocaInstrumentoService> {
 
     //REVISAR MÉTODO VACÍO AL FINAL
 

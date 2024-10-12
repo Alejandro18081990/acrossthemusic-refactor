@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 
 import com.common_microservicios.commons.controller.CommonController;
+import com.example.demo.dto.mtj.MusicoTocaJamDTO;
 import com.example.demo.entities.MusicoTocaJam;
 import com.example.demo.services.MusicoTocaJamService;
 import com.example.demo.services.impl.MusicoTocaJamServiceImpl;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("apiATM/jams/mtj")
 @Tag(name = "PI: Across the music - Controlador MusicoTocaJam")
-public class MusicoTocaJamController extends CommonController<MusicoTocaJam, MusicoTocaJamService> {
+public class MusicoTocaJamController extends CommonController<MusicoTocaJam, MusicoTocaJamDTO,MusicoTocaJamService> {
 
 
     @Autowired

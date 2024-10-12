@@ -1,5 +1,7 @@
 package com.example.demo.dto.musicoDto;
 
+import com.common_microservicios.commons.dto.CommonDTO;
+import com.common_microservicios.commons.dto.CommonDTOConverter;
 import com.example.demo.dto.instrumentoDTO.InstrumentoDTOConverter;
 import com.example.demo.dto.mtIDTO.MusicoTocaInstrumentoDTO;
 import com.example.demo.dto.mtIDTO.MusicoTocaInstrumentoDTOConverter;
@@ -23,7 +25,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public class MusicoDtoConverter {
+public class MusicoDtoConverter extends CommonDTO<Musico, MusicoDTO> implements CommonDTOConverter<Musico, MusicoDTO> {
 
     @Autowired
     private ModelMapper modelMapper;
@@ -36,7 +38,8 @@ public class MusicoDtoConverter {
     @Autowired
     MusicoTocaJamDtoConverter musicoTocaJamDTOConverter;
 
-    public MusicoDTO convertirADTO(Musico musico) {
+    @Override
+    public MusicoDTO customLoadFromDomain(Musico musico) {
         MusicoDTO musicoDTO = modelMapper.map(musico, MusicoDTO.class);
         List<MusicoTocaInstrumentoDTO> listaInstrumentosDTO = new ArrayList<>();
         List<MusicoTocaEstiloDTO> listaEstilosDTO = new ArrayList<>();

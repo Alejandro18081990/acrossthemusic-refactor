@@ -1,5 +1,6 @@
 package com.example.demo.dto.mtj;
 
+import com.common_microservicios.commons.dto.CommonDTO;
 import com.example.demo.dto.instrumentoDTO.InstrumentoDTO;
 import com.example.demo.dto.jamSessionDto.JamSessionDto;
 import com.example.demo.dto.musicoDto.MusicoDTO;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-public class MusicoTocaJamDTO {
+public class MusicoTocaJamDTO extends CommonDTO {
 
 
     private MusicoDTO musico;

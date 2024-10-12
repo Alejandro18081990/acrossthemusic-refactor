@@ -2,6 +2,8 @@ package com.example.demo.controllers;
 
 
 import com.common_microservicios.commons.controller.CommonController;
+import com.example.demo.dto.estiloDTO.EstiloDTO;
+import com.example.demo.dto.musicoDto.MusicoDTO;
 import com.example.demo.entities.Estilo;
 
 
@@ -14,6 +16,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("apiATM/estilos")
 @Tag(name = "PI Across the music - Controller Estilos")
-public class EstiloController extends CommonController<Estilo, EstiloService> {
+public class EstiloController extends CommonController<Estilo, EstiloDTO, EstiloService> {
 
 }

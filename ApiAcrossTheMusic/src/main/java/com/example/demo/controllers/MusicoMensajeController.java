@@ -20,7 +20,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("apiATM/musicoMensaje")
 @Tag(name = "PI: Across the music - Controlador MusicoMensaje")
-public class MusicoMensajeController extends CommonController<MusicoMensaje, MusicoMensajeService> {
+public class MusicoMensajeController extends CommonController<MusicoMensaje, MusicoMensajeDTO, MusicoMensajeService> {
 
 
     @Autowired

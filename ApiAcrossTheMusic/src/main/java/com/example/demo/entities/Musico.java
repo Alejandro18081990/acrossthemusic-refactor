@@ -3,6 +3,7 @@ package com.example.demo.entities;
 import java.util.List;
 import java.util.Set;
 
+import com.common_microservicios.commons.entity.CommonEntity;
 import com.example.demo.Permisos;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -14,7 +15,7 @@ import lombok.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "musico")
-public class Musico {
+public class Musico extends CommonEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,7 +47,7 @@ public class Musico {
     @OneToMany(mappedBy = "musico")
     Set<MusicoTocaGrupo> musicoTocaGrupo;
 
-    @OneToMany(mappedBy = "musicoRemitente" )
+    @OneToMany(mappedBy = "musicoRemitente")
     private Set<MusicoMensaje> musicoRemitente;
 
     @OneToMany(mappedBy = "musicoDestinatario")
