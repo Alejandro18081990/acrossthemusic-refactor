@@ -1,12 +1,12 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°‘ùÉøÿÿÿÿJ$e13aa258-f0d9-4ae5-8731-d2c4ebc4d891
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°‘ùÉøÿÿÿÿJ$95862db3-41b3-401d-b25f-02b3c4ca9c21
 ~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$6c17ef60-3dcc-44c2-a9ad-4e3ece7e895b
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$d394b21c-1fc0-4510-9ec9-cbeb90b1da52
 ~
-java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄÞJ$50e16446-8200-4716-93eb-db9b1d34e5f1
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄÞJ$ccef715e-d8e2-496f-86e5-9d8149f2d907
 ~
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄÞJ$de856fe4-f897-4997-8e34-bbb9213c0ab5
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄÞJ$97878b05-f66d-403c-be8f-49527923055c
 ~
-java:S6813$"BRemove this field injection and use constructor injection instead.(êæÄÞJ$c1846c91-4b00-4e22-9342-77c83f49993a
+java:S6813$"BRemove this field injection and use constructor injection instead.(êæÄÞJ$dbea31c8-1409-4351-a659-233581728ece
 ~
-java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄÞJ$69b1195c-760d-4805-b883-c8e64228eec5
+java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄÞJ$6adc3c67-a262-48d8-9a0a-2e13d0ee4141

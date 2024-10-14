@@ -56,7 +56,7 @@ public class CommonController<E, D extends CommonDTO, S extends CommonService<E>
             return ResponseEntity.notFound().build();
         else {
             final D dto = dtoType.getConstructor().newInstance();
-            dto.loadFromDomain(entityOptional.get());
+            dto.loadFromDomain(entityOptional);
             return ResponseEntity.ok().body(dto);
         }
 
