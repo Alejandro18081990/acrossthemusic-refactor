@@ -1,8 +1,0 @@
-
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(üèŒJ$de987a6b-f67f-4add-881f-41405cd33ae3
-~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$8d8d3914-d0f9-46fa-8aaf-441ca801fad4
-~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$b0835f1f-1346-4351-8d4f-4a902a3dee40
-•
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8®—šË¨2J$bf508172-fc9b-4107-9a47-021f975b4a9c

@@ -1,26 +1,0 @@
-
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°‘ùÉøÿÿÿÿ
-B
-java:S1068",Remove this unused "idMusico" private field.(ší†°
-D
-java:S1068")Remove this unused "email" private field.(ª«Õìùÿÿÿÿ
-E
-java:S1068"*Remove this unused "nombre" private field.(µÿï„ùÿÿÿÿ
-H
-java:S1068"-Remove this unused "apellido1" private field.(úì”ñûÿÿÿÿ
-H
-java:S1068"-Remove this unused "apellido2" private field.(°éŒ—şÿÿÿÿ
-C
-java:S1068"(Remove this unused "edad" private field.(®ÂèÍûÿÿÿÿ
-J
-java:S1068"4Remove this unused "aniosExperiencia" private field.(ÉÚ¾¢
-K
-java:S1068"0Remove this unused "instrumentos" private field.(º«õîÿÿÿÿÿ
-F
-java:S1068"+Remove this unused "estilos" private field.(µò»²ùÿÿÿÿ
-C
-java:S1068"(Remove this unused "jams" private field.(­œµÓùÿÿÿÿ
-C
-java:S1068"-Remove this unused "formacion" private field.(î¬¹Ò
-F
-java:S1068"+Remove this unused "permiso" private field.(é•ÅÛÿÿÿÿÿ
