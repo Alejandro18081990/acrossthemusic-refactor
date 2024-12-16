@@ -4,3 +4,7 @@ ESTA ES LA VERSIÓN FUNCIONAL Y REFACTORIZADA
 2. Me quedo intenando inicializar dtoType en CommonController.
 3. Manejo de excepciones en loadFromDomain y similares.
 4. Revisar la inicialización de ModelMapper en la librería.
+5. Repasar apuntes de Spring Security para realizar un manejo correcto
+   de Csrf.
+
+Me quedo terminando de formar el application.properties puesto que aún me siguen surgiendo algunos errores.
