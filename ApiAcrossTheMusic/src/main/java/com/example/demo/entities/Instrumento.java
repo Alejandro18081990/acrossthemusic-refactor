@@ -16,20 +16,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor 
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "instrumento")
 public class Instrumento {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idInstrumento;
-	@JsonIgnore
- 	@OneToMany(mappedBy = "instrumento" , fetch = FetchType.EAGER)
-	Set<MusicoTocaInstrumento> musicoTocaInstrumento;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idInstrumento;
 
-	@Column(name = "nombreInstrumento")
-	private String nombreInstrumento;
+    @JsonIgnore
+    @OneToMany(mappedBy = "instrumento", fetch = FetchType.EAGER)
+    Set<MusicoTocaInstrumento> musicoTocaInstrumento;
+
+    @Column(name = "nombreInstrumento")
+    private String nombreInstrumento;
 
 }

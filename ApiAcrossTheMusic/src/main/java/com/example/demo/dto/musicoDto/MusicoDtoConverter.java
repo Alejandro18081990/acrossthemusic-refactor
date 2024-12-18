@@ -44,6 +44,7 @@ public class MusicoDtoConverter extends CommonDTO<Musico, MusicoDTO> implements 
         List<MusicoTocaInstrumentoDTO> listaInstrumentosDTO = new ArrayList<>();
         List<MusicoTocaEstiloDTO> listaEstilosDTO = new ArrayList<>();
         List<MusicoTocaJamDTO> listaJamDTO = new ArrayList<>();
+
         for (MusicoTocaInstrumento instrumento : musico.getMusicoTocaInstrumento())
             listaInstrumentosDTO.add(musicoTocaInstrumentoDTOConverter.convertirADTO(instrumento));
 

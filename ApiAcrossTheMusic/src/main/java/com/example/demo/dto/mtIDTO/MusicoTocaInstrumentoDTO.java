@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class MusicoTocaInstrumentoDTO extends CommonDTO {
 
-    Long id;
+    private Long id;
 
     private InstrumentoDTO instrumento;
 }

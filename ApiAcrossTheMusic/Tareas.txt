@@ -7,4 +7,6 @@ ESTA ES LA VERSIÓN FUNCIONAL Y REFACTORIZADA
 5. Repasar apuntes de Spring Security para realizar un manejo correcto
    de Csrf.
 
-Me quedo terminando de formar el application.properties puesto que aún me siguen surgiendo algunos errores.
+Revisión de código:
+- MusicoDtoConverter: revisar posibles mejoras del algoritmo que construye al músico con sus estilos e instrumentos.
+- Reflexionar sobre las validaciones que se hacen sobre algunos campos como por ejemplo el campo id ¿son realmente necesarias?

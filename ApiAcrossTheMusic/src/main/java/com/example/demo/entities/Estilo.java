@@ -17,20 +17,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity (name="estilo")
+@Entity(name = "estilo")
 @Table(name = "Estilo")
 public class Estilo {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idEstilo;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idEstilo;
 
-/* 	@OneToMany(mappedBy = "estilo")
-	Set<MusicoTocaEstilo> musicoTocaEstilo;
- */
-	@Column(name = "nombreEstilo")
-	private String nombreEstilo;
-
-	//@OneToMany(mappedBy = "estilo")
-	//private List<JamSession> listadoJamsSessions;
+    @Column(name = "nombreEstilo")
+    private String nombreEstilo;
 }

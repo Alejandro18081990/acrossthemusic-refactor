@@ -28,7 +28,6 @@ public class MusicoMensajeController extends CommonController<MusicoMensaje, Mus
     @Autowired
     private MusicoMensajeDTOConverter musicoMensajeDTOConverter;
 
-
     @Operation(summary = "Borra todos los registros que coincidan con el id musico recibido")
     @DeleteMapping("/musico/{id}")
     public void deleteMusicoMensajeByMusico(@PathVariable Long id) {
@@ -39,9 +38,10 @@ public class MusicoMensajeController extends CommonController<MusicoMensaje, Mus
     @GetMapping("/musico/{id}")
     @Operation(summary = "Devuelve todos los registros de MusicoMensaje que coinciden con la idMusico recibida")
     public ResponseEntity<List<MusicoMensajeDTO>> findMusicoMensajeByMusicoDestinatarioId(@PathVariable Long id) {
-        if (id == null)
+        if (id == null || id < 0)
             return ResponseEntity.noContent().build();
         List<MusicoMensaje> misMensajes = musicoMensajeServiceImpl.findMusicoMensajeByMusicoDestinatario(id);
+
         List<MusicoMensajeDTO> misMensajesDTO = new ArrayList<>();
         for (MusicoMensaje mm : misMensajes) {
             MusicoMensajeDTO mmDTO = musicoMensajeDTOConverter.convertirDto(mm);
@@ -53,7 +53,7 @@ public class MusicoMensajeController extends CommonController<MusicoMensaje, Mus
     @GetMapping("enviado/{id}")
     @Operation(summary = "Devuelve todos los registros de MusicoMensaje que coinciden con la idMusico recibida")
     public ResponseEntity<List<MusicoMensajeDTO>> findMusicoMensajeByMusicoRemitenteIdMusico(@PathVariable Long id) {
-        if (id == null)
+        if (id == null || id < 0)
             return ResponseEntity.noContent().build();
         List<MusicoMensaje> misMensajes = musicoMensajeServiceImpl.findMusicoMensajeByMusicoRemitente(id);
         List<MusicoMensajeDTO> misMensajesDTO = new ArrayList<>();

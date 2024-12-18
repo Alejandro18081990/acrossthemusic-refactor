@@ -1,5 +1,6 @@
 package com.example.demo.configuracion;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -13,6 +14,9 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
+    @Value("${JWT_URI}")
+    private String jwtUri;
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
@@ -35,9 +39,7 @@ public class SecurityConfig {
 
     @Bean
     public JwtDecoder jwtDecoder() {
-        return NimbusJwtDecoder.withJwkSetUri("https://localhost:8443/realms/acrossthemusic/protocol/openid-connect/certs")
+        return NimbusJwtDecoder.withJwkSetUri(jwtUri)
                 .build();
     }
-
-
 }

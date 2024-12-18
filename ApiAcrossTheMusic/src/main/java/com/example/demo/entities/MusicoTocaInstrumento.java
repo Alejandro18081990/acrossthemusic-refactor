@@ -14,7 +14,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity(name = "musico_toca_instrumento")
-//@Table(name = "musico_toca_instrumento")
 public class MusicoTocaInstrumento implements Serializable {
 
     @Id

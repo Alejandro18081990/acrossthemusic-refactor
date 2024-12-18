@@ -18,6 +18,7 @@ public class Grupo {
     private long idGrupo;
 
     private String nombreGrupo;
+    
     private int anioFormacion;
 
     @OneToMany(mappedBy = "grupo", fetch = FetchType.EAGER)

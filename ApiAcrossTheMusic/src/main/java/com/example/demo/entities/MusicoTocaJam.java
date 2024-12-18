@@ -15,7 +15,6 @@ import lombok.*;
 @Getter
 @Setter
 @Entity(name = "musico_toca_jam")
-//@Table(name = "musico_toca_jam")
 public class MusicoTocaJam {
 
     @Id

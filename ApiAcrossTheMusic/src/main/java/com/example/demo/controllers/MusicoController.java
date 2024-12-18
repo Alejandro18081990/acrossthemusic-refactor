@@ -32,7 +32,6 @@ public class MusicoController extends CommonController<Musico, MusicoDTO, Musico
     @Autowired
     private MusicoDtoConverter musicoDtoConverter;
 
-
     @Autowired
     private MusicoServiceImpl musicoServiceImpl;
 
