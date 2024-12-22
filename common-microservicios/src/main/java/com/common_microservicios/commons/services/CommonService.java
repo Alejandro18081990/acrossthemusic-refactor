@@ -3,9 +3,11 @@ package com.common_microservicios.commons.services;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-
+@Component
 public interface CommonService<E>{
 
     public Iterable<E> findAll();

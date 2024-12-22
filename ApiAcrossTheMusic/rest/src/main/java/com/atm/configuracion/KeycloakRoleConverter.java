@@ -1,4 +1,4 @@
-package configuracion;
+package com.atm.configuracion;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.security.core.GrantedAuthority;

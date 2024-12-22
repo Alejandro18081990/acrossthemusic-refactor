@@ -16,6 +16,10 @@
         <module>rest</module>
     </modules>
 
+    <profiles>
+        <profile><id>local</id></profile>
+    </profiles>
+
     <groupId>com.atm</groupId>
     <artifactId>ApiAcrossMusic</artifactId>
     <version>0.0.1-SNAPSHOT</version>

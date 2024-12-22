@@ -1,4 +1,4 @@
-package configuracion;
+package com.atm.configuracion;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

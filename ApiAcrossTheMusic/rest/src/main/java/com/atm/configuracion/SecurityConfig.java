@@ -1,4 +1,4 @@
-package configuracion;
+package com.atm.configuracion;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
